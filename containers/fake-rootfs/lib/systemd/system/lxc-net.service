@@ -1,0 +1,13 @@
+[Unit]
+Description=LXC network bridge setup
+After=network-online.target
+Before=lxc.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/x86_64-linux-gnu/lxc/lxc-net start
+ExecStop=/usr/lib/x86_64-linux-gnu/lxc/lxc-net stop
+
+[Install]
+WantedBy=multi-user.target
