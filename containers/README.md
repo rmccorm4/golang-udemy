@@ -5,21 +5,6 @@
 `container.go` attempts to `chroot` into a file system for the container to live inside.
 To do this, we will need a filesystem. Instructions below:
 
-### Creating a File System with LXC (untested)
-
-1. Install LXC
-
-    ```bash
-    # On Ubuntu, for example
-    sudo apt-get install lxc
-    ```
-
-2. Create a container with `lxc-create` and use this filesystem
-
-    ```bash
-    lxc-create -t ubuntu -n my-container
-    # Now use /var/cache/lxc/my-container/rootfs-amd64 as the directory to `chroot` into in `container.go`
-    ```
 
 ### Creating a (Fake) File System 
 
@@ -43,6 +28,24 @@ mkdir -p fake-rootfs/sys/fs/cgroup/pids
 # Test that it works - This should bring you to a minimal bash prompt
 sudo chroot fake-rootfs
 ```
+
+
+### Creating a File System with LXC (untested)
+
+1. Install LXC
+
+    ```bash
+    # On Ubuntu, for example
+    sudo apt-get install lxc
+    ```
+
+2. Create a container with `lxc-create` and use this filesystem
+
+    ```bash
+    lxc-create -t ubuntu -n my-container
+    # Now use /var/cache/lxc/my-container/rootfs-amd64 as the directory to `chroot` into in `container.go`
+    ```
+
 
 ## Running the Container
 
