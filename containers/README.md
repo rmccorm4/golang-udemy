@@ -46,6 +46,9 @@ sudo chroot fake-rootfs
     # Now use /var/cache/lxc/my-container/rootfs-amd64 as the directory to `chroot` into in `container.go`
     ```
 
+### More Correct(?) way of creating a filesystem
+[https://github.com/NVIDIA/libnvidia-container#command-line-example](https://github.com/NVIDIA/libnvidia-container#command-line-example)
+
 
 ## Running the Container
 
