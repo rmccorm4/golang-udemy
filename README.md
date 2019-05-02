@@ -7,4 +7,5 @@
 
 ## TODO
 * [ ] Re-factor [Pokefetch](https://github.com/rmccorm4/Pokefetch) in Go.
-* [ ] Possibly do [Manual-Alpaca](https://github.com/rmccorm4/manual-alpaca) in Go.
+* [ ] Possibly do [Manual-Alpaca](https://github.com/rmccorm4/manual-alpaca) in Go?
+* [ ] Gophetch?
